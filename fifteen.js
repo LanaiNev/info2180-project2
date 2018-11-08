@@ -1,6 +1,6 @@
 /*							
-						EXTRA FEATURE
-			-------------------------------
+			EXTRA FEATURE
+	       	-------------------------------
 >>	Change Background Image upon seletion of the check box
 
 */
@@ -124,10 +124,12 @@ function isValidMove(X, Y, Moves)
 		var X = parseInt(X); //X coordinate of Tile
 		var Y = parseInt(Y); //Y coordinate of Tile
 
-		if ((Moves[1] === Y) && (Moves[0] === (X - 100)) || ((Moves[1] === (Y - 100)) && (Moves[0] === X)) || 
-			((Moves[1] === (Y + 100)) && (Moves[0] === X)) || ((Moves[1] === Y)  && (Moves[0] === (X + 100)))) {
+		if (((Moves[1] === Y) && (Moves[0] === (X - 100))) || (((Moves[1] === (Y - 100)) && (Moves[0] === X))) || 
+			(((Moves[1] === (Y + 100)) && (Moves[0] === X))) || (((Moves[1] === Y)  && (Moves[0] === (X + 100))))) {
 			state = true;			
 		}
+
+
 		
 		return state;
 }
@@ -208,7 +210,7 @@ function setUpCheckboxes()
 		// Creates the text label for the checkbox
 		changePicChkBoxlabel = document.createElement('label');
 		changePicChkBoxlabel.htmlFor = "changePicChkBox1";
-		changePicChkBoxlabel.appendChild(document.createTextNode('Change background'));
+		changePicChkBoxlabel.appendChild(document.createTextNode('Change Background Image'));
 
 		//Creates the checkbox
 		changePicChkBox = document.createElement("input");
